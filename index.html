@@ -9,26 +9,48 @@
 </head>
 <body>
   <div class='content'>
-    <img src="./img/page1.png" />
+    <img src="./img/page1.png" class="t1"/>
     <img src="./img/page2.png" />
-    <img src="./img/page3.png" />
+    <img src="./img/page3.png" class="t2"/>
     <img src="./img/page4.png" />
-    <img src="./img/page5.png" />
+    <img src="./img/page5.png" class="t3"/>
     <img src="./img/page6_1.png" />
     <img src="./img/page7.png" />
-    <img src="./img/page8.png" />
+    <img src="./img/page8.png" class="t4"/>
     <img src="./img/page9.png" />
-    <img src="./img/page10.png" />
+    <img src="./img/page10.png" class="t5"/>
     <img src="./img/page12.png" />
-    <img src="./img/page13.png" />
+    <img src="./img/page13.png" class="t6"/>
     <img src="./img/page14.png" />
     <img src="./img/page15.png" />
-    <img src="./img/page16.png" />
+    <img src="./img/page16.png" class="t7"/>
     <img src="./img/page17.png" />
     <img src="./img/page18.png" />
     <img src="./img/page19.png" />
     <img src="./img/page20-1.png" />
     <img src="./img/page21.png" />
   </div>
+  <div class="lift-nav">
+    <ul class="lift">
+      <li>1楼</li>
+      <li>2楼</li>
+      <li>3楼</li>
+      <li>水果项目</li>
+      <li>5楼</li>
+      <li>6楼</li>
+    </ul>
+  </div>
 </body>
+<script src="./js/jquery.min.js" ></script>
+<script src="./js/scroll.js" ></script>
+<script>
+	$(function(){
+		LiftEffect({
+			"control1": ".lift-nav", 						  //侧栏电梯的容器
+			"control2": ".lift",                           //需要遍历的电梯的父元素
+			"target": [".t1",".t2",".t3",".t4",".t5",".t6"], //监听的内容，注意一定要从小到大输入
+			"current": "current" 						  //选中的样式
+		});
+  })
+  </script>
 </html>

@@ -4,10 +4,44 @@ body {
   width: 1200px;
   margin: 0 auto;
   background-color: #f7f7f7;
+  position: relative;
+}
+
+li {
+  list-style-type: none;
 }
 
 img {
   display: block;
   width: 100%;
   padding-bottom: 10px;
+}
+
+.lift-nav{
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.lift-nav li{
+  width: 60px;
+  height: 30px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  padding: 0 15px;
+  margin-bottom: 10px;
+  background: skyblue;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.lift-nav li.current{
+  background: tomato;
 }

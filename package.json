@@ -1,0 +1,19 @@
+{
+  "name": "lifengmin",
+  "version": "1.0.0",
+  "description": "Li Feng Min Home Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hotmanxp/lifengmin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hotmanxp/lifengmin/issues"
+  },
+  "homepage": "https://github.com/hotmanxp/lifengmin#readme"
+}
