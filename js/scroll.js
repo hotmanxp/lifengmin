@@ -44,7 +44,6 @@ function LiftEffect(json) {
   }
 
   $(json.control2).children().on("click", function () {
-    console.log('click')
     $(window).off("scroll");
     var index = $(this).index();
     Selected(index);
@@ -57,7 +56,7 @@ function LiftEffect(json) {
 
         if (index == i) {
           $("html,body").stop().animate({
-            "scrollTop": array[i] - 50
+            "scrollTop": array[i] - 10
           }, 500, function () {
             $(window).on("scroll", Check);
           });

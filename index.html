@@ -28,7 +28,7 @@
     <img src="./img/page18.png" />
     <img src="./img/page19.png" />
     <img src="./img/page20-1.png" />
-    <img src="./img/page21.png" />
+    <img src="./img/page21.png" class="end"/>
   </div>
   <div class="lift-nav">
     <ul class="lift">
@@ -38,6 +38,7 @@
       <li>水果项目</li>
       <li>5楼</li>
       <li>6楼</li>
+      <li>End</li>
     </ul>
   </div>
 </body>
@@ -48,7 +49,7 @@
 		LiftEffect({
 			"control1": ".lift-nav", 						  //侧栏电梯的容器
 			"control2": ".lift",                           //需要遍历的电梯的父元素
-			"target": [".t1",".t2",".t3",".t4",".t5",".t6"], //监听的内容，注意一定要从小到大输入
+			"target": [".t1",".t2",".t3",".t4",".t5",".t6",".end"], //监听的内容，注意一定要从小到大输入
 			"current": "current" 						  //选中的样式
 		});
   })
