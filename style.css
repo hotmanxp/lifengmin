@@ -29,17 +29,17 @@ img {
   justify-content: space-around;
 }
 .lift-nav li{
-  width: 60px;
+  width: 50px;
   height: 30px;
   font-size: 12px;
   text-align: center;
   line-height: 30px;
   color: #fff;
-  padding: 0 15px;
-  margin-bottom: 10px;
+  padding: 0 10px;
+  margin-bottom: 5px;
   background: skyblue;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
 .lift-nav li.current{
