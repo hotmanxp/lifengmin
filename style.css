@@ -1,0 +1,12 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+  padding-bottom: 10px;
+}
