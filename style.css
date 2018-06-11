@@ -37,11 +37,11 @@ img {
   color: #fff;
   padding: 0 10px;
   margin-bottom: 5px;
-  background: skyblue;
+  background: #ffab33;
   cursor: pointer;
   border-radius: 10px;
 }
 
 .lift-nav li.current{
-  background: tomato;
+  background: #ff8400;
 }
