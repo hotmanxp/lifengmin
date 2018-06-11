@@ -1,14 +1,21 @@
 function LiftEffect(json) {
-  var array = [];
+  var $liContainer = $(json.controlSelector)
+  var $array = [];
+  $('img[title^=data_]').each(function(idx, item){
+    $array.push([$(item).offset().top, $(item).attr('title')])
+  })
 
-  for (var i = 0; i < json.target.length; i++) {
-    var t = $(json.target[i]).offset().top;
-    array.push(t);
 
+  function initIcon(iconList) {
+    $liContainer.html(iconList.reduce(function (acc, item) {
+      return acc + '<li>' + item[1].split('_')[1] + '</li>'
+    }, ''))
   }
 
+  initIcon($array)
+
   function Selected(index) {
-    $(json.control2).children().eq(index).addClass(json.current).siblings().removeClass(json.current);
+    $liContainer.children().eq(index).addClass(json.activeClassName).siblings().removeClass(json.activeClassName);
   }
 
 
@@ -18,21 +25,14 @@ function LiftEffect(json) {
 
     var wst = $(window).scrollTop();
 
-
-    if (wst >= $(json.target[0]).offset().top - 100) {
-      $(json.control1).fadeIn(500);
-    } else {
-      $(json.control1).fadeOut(500);
-    }
-
     var key = 0;
     var flag = true;
-    for (var i = 0; i < array.length; i++) {
+    for (var i = 0; i < $array.length; i++) {
       key++;
       if (flag) {
 
-        if (wst >= array[array.length - key] - 300) {
-          var index = array.length - key;
+        if (wst >= $array[$array.length - key][0] - 300) {
+          var index = $array.length - key;
           flag = false;
         } else {
           flag = true;
@@ -43,20 +43,19 @@ function LiftEffect(json) {
     Selected(index);
   }
 
-  $(json.control2).children().on("click", function () {
+  $liContainer.children().on("click", function () {
     $(window).off("scroll");
     var index = $(this).index();
     Selected(index);
 
-
     var flag = true;
-    for (var i = 0; i < array.length; i++) {
+    for (var i = 0; i < $array.length; i++) {
 
       if (flag) {
 
         if (index == i) {
           $("html,body").stop().animate({
-            "scrollTop": array[i] - 10
+            "scrollTop": $array[i][0] - 10
           }, 500, function () {
             $(window).on("scroll", Check);
           });

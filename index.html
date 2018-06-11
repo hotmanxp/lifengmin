@@ -9,36 +9,30 @@
 </head>
 <body>
   <div class='content'>
-    <img src="./img/page1.png" class="t1"/>
+    <img src="./img/page1.png" title='data_个人简介' />
     <img src="./img/page2.png" />
-    <img src="./img/page3.png" class="t2"/>
-    <img src="./img/page4.png" />
-    <img src="./img/page5.png" class="t3"/>
-    <img src="./img/page6_1.png" />
+    <img src="./img/page3.png" />
+    <img src="./img/page4.png" title='data_福民网站' />
+    <img src="./img/page5.png" />
+    <img src="./img/page6_1.png" title='data_福民移动' />
     <img src="./img/page7.png" />
-    <img src="./img/page8.png" class="t4"/>
-    <img src="./img/page9.png" />
-    <img src="./img/page10.png" class="t5"/>
-    <img src="./img/page12.png" />
-    <img src="./img/page13.png" class="t6"/>
+    <img src="./img/page8.png" />
+    <img src="./img/page9.png" title='data_快乐到家' />
+    <img src="./img/page10.png" />
+    <img src="./img/page11.png" />
+    <img src="./img/page12.png" title='data_鲜果香' />
+    <img src="./img/page13.png" />
     <img src="./img/page14.png" />
     <img src="./img/page15.png" />
-    <img src="./img/page16.png" class="t7"/>
+    <img src="./img/page16.png" />
     <img src="./img/page17.png" />
     <img src="./img/page18.png" />
-    <img src="./img/page19.png" />
+    <img src="./img/page19.png" title='data_平面' />
     <img src="./img/page20-1.png" />
-    <img src="./img/page21.png" class="end"/>
+    <img src="./img/page21.png" title='data_End' />
   </div>
   <div class="lift-nav">
     <ul class="lift">
-      <li>1楼</li>
-      <li>2楼</li>
-      <li>3楼</li>
-      <li>水果项目</li>
-      <li>5楼</li>
-      <li>6楼</li>
-      <li>End</li>
     </ul>
   </div>
 </body>
@@ -47,10 +41,8 @@
 <script>
 	window.onload = (function(){
 		LiftEffect({
-			"control1": ".lift-nav", 						  //侧栏电梯的容器
-			"control2": ".lift",                           //需要遍历的电梯的父元素
-			"target": [".t1",".t2",".t3",".t4",".t5",".t6",".end"], //监听的内容，注意一定要从小到大输入
-			"current": "current" 						  //选中的样式
+			"controlSelector": ".lift-nav .lift",               //需要遍历的电梯的父元素
+			"activeClassName": "current" 						  //选中的样式
 		});
   })
   </script>
