@@ -13,10 +13,10 @@
     <img src="./img/page02.png" />
     <img src="./img/page03.png" />
     <img src="./img/page04.png" />
-    <img src="./img/page05.png" title='data_ 知鸟' class="zn"/>
-    <img src="./img/page06_1.png" class="zn"/>
-    <img src="./img/page07.png" class="zn"/>
-    <img src="./img/page08.png" class="zn"/>
+    <img src="./img/page05.png" title='data_ 知鸟' class="zn" style="display: none" />
+    <img src="./img/page06_1.png" class="zn" style="display: none"/>
+    <img src="./img/page07.png" class="zn" style="display: none"/>
+    <img src="./img/page08.png" class="zn" style="display: none"/>
     <img src="./img/page09.png" title='data_Sasa' />
     <img src="./img/page010.png" />
     <img src="./img/page011.png" />
@@ -53,6 +53,8 @@
 	window.onload = (function(){
 		if(window.location.href.indexOf('zn') === -1) {
 		$('.zn').remove()
+		} else {
+		$('.zn').show()
 		}
 		LiftEffect({
 			"controlSelector": ".lift-nav .lift",               //需要遍历的电梯的父元素
